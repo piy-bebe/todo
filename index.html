@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar__logo">Control panel</div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">Аналитика</li>
+        <li class="navbar__item">Управление контентом</li>
+        <li class="navbar__item">Задачи</li>
+        <li class="navbar__item">Настройки</li>
+        <li class="navbar__item">Аккаунт</li>
+        <li class="navbar__item">Выход</li>
+      </ul>
+    </div>
+    <div class="workspace">
+      <h2 class="workspace__title">Управление задачами</h2>
+      <div class="workspace__form">
+        <input class="workspace__input workspace__input--title" type="text" placeholder="Название" id="title">
+        <input class="workspace__input workspace__input--time" type="text" placeholder="Время" id="time">
+        <button class="workspace__button" id="cardAdd">Добавить</button>
+      </div>
+      <div class="workspace__cards" id="cards"></div>
+    </div>
+  </div>
+
+
+
+  <template id="templateCard">
+    <div class="card" id="card">
+      <time class="card__time"></time>
+      <h2 class="card__title"></h2>
+      <img class="card__delete" src="delete.svg" id="cardDelete" />
+    </div>
+  </template>
+  
+  <script src="index.js"></script>
+</body>
+</html>
